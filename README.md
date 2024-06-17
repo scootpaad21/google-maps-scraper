@@ -1,4 +1,12 @@
 # Google maps scraper
+
+Run docker on VPS
+1) docker run -v $(pwd):/data mrtomlin/leads-scraper:latest -dsn "postgres://uapuvpgptupual:pbc2668da5c94fb2f3dce558657c0337fcdb0eec77438fcc589ade610ded97b02@ce0lkuo944ch99.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/dfeaok07mkmi6n" -produce -input /data/MS.txt
+
+Replace MS.txt with correct state txt file
+2) docker run mrtomlin/leads-scraper:latest -dsn "postgres://uapuvpgptupual:pbc2668da5c94fb2f3dce558657c0337fcdb0eec77438fcc589ade610ded97b02@ce0lkuo944ch99.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/dfeaok07mkmi6n" -c 2 -exit-on-inactivity 3m
+
+
 ![build](https://github.com/gosom/google-maps-scraper/actions/workflows/build.yml/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/gosom/google-maps-scraper)](https://goreportcard.com/report/github.com/gosom/google-maps-scraper)
 
